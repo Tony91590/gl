@@ -26,5 +26,5 @@ cp $GITHUB_WORKSPACE/lean/Redmi-AX6000/data/default-settings/Makefile package/le
 cp $GITHUB_WORKSPACE/lean/Redmi-AX6000/data/autocore/index.htm package/lean/autocore/files/arm/
 cp $GITHUB_WORKSPACE/lean/Redmi-AX6000/data/zones.lua feeds/luci/applications/luci-app-firewall/luasrc/model/cbi/firewall/
 # apply patch 
-find patches -type f -exec bash -c "(cd "$GITHUB_WORKSPACE" && patch -p1) < {}" \;
+find patches -type f -exec bash -c "(cd "$GITHUB_WORKSPACE/patches" && patch -p1) < {}" \;
 find patches -type f -name \*.orig -delete
