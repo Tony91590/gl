@@ -24,6 +24,16 @@ cp $GITHUB_WORKSPACE/lean/GL-MT6000/data/default-settings/zzz-default-settings p
 cp $GITHUB_WORKSPACE/lean/GL-MT6000/data/default-settings/Makefile package/lean/default-settings/
 cp $GITHUB_WORKSPACE/lean/GL-MT6000/data/autocore/index.htm package/lean/autocore/files/arm/
 cp $GITHUB_WORKSPACE/lean/GL-MT6000/data/zones.lua feeds/luci/applications/luci-app-firewall/luasrc/model/cbi/firewall/
+cat > package/base-files/files/etc/banner << EOF
+  _______                     ________        __
+ |       |.-----.-----.-----.|  |  |  |.----.|  |_
+ |   -   ||  _  |  -__|     ||  |  |  ||   _||   _|
+ |_______||   __|_____|__|__||________||__|  |____|
+          |__| W I R E L E S S   F R E E D O M
+ -----------------------------------------------------
+ %D %V, %C
+ -----------------------------------------------------
+EOF
 # apply patch 1
 BOARD_PATH="package/boot/uboot-mediatek"
 cp $GITHUB_WORKSPACE/patches/0001-Add-GL-MT6000.patch $BOARD_PATH/
