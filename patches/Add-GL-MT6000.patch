@@ -32,7 +32,6 @@
  endef
 
 -$(eval $(call BuildPackage/U-Boot))
-\ No newline at end of file
 +$(eval $(call BuildPackage/U-Boot))
 +++ a/target/linux/mediatek/image/filogic.mk
 +++ b/target/linux/mediatek/image/filogic.mk
@@ -94,5 +93,4 @@
    IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
  endef
 -TARGET_DEVICES += xiaomi_redmi-router-ax6000
-\ No newline at end of file
 +TARGET_DEVICES += xiaomi_redmi-router-ax6000
