@@ -33,6 +33,7 @@
 
 -$(eval $(call BuildPackage/U-Boot))
 +$(eval $(call BuildPackage/U-Boot))
+
 +++ a/target/linux/mediatek/image/filogic.mk
 +++ b/target/linux/mediatek/image/filogic.mk
 @@ -36,6 +36,37 @@
