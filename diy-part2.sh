@@ -32,5 +32,10 @@ cd $BOARD_PATH/
 OP_RESULT=$(patch < 0001-Add-GL-MT6000.patch)
 rm -rf 0001-Add-GL-MT6000.patch.patch
 echo "0001-Add-GL-MT6000.patch config file: $OP_RESULT"
-cd ~-
 # apply patch 2
+BOARD_PATH="target/linux/mediatek/image/filogic.mk"
+cp $GITHUB_WORKSPACE/patches/0002-Add-GL-MT6000.patch $BOARD_PATH/
+cd $BOARD_PATH/
+OP_RESULT=$(patch < 0002-Add-GL-MT6000.patch)
+rm -rf 0002-Add-GL-MT6000.patch.patch
+echo "0002-Add-GL-MT6000.patch config file: $OP_RESULT"
