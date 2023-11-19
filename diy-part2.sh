@@ -25,7 +25,12 @@ cp $GITHUB_WORKSPACE/lean/Redmi-AX6000/data/default-settings/zzz-default-setting
 cp $GITHUB_WORKSPACE/lean/Redmi-AX6000/data/default-settings/Makefile package/lean/default-settings/
 cp $GITHUB_WORKSPACE/lean/Redmi-AX6000/data/autocore/index.htm package/lean/autocore/files/arm/
 cp $GITHUB_WORKSPACE/lean/Redmi-AX6000/data/zones.lua feeds/luci/applications/luci-app-firewall/luasrc/model/cbi/firewall/
-cp $GITHUB_WORKSPACE/patches/patches/Add-GL-MT6000.patch patches/
-# apply patch 
-find patches -type f -exec bash -c "(cd "$GITHUB_WORKSPACE/patches" && patch -p1) < {}" \;
-find patches -type f -name \*.orig -delete
+# apply patch 1
+BOARD_PATH="package/boot/uboot-mediatek/Makefile"
+cp $GITHUB_WORKSPACE/patches/0001-Add-GL-MT6000.patch $BOARD_PATH/
+cd $BOARD_PATH/
+OP_RESULT=$(patch < 0001-Add-GL-MT6000.patch)
+rm -rf 0001-Add-GL-MT6000.patch.patch
+echo "0001-Add-GL-MT6000.patch config file: $OP_RESULT"
+cd ~-
+# apply patch 2
