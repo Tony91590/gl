@@ -1,0 +1,35 @@
+--- a/Makefile
++++ b/Makefile
+@@ -236,6 +236,18 @@
+   FIP_COMPRESS:=1
+ endef
+
++define U-Boot/mt7986_glinet_gl-mt6000
++  NAME:=GL.iNet GL-MT6000
++  BUILD_SUBTARGET:=filogic
++  BUILD_DEVICES:=glinet_gl-mt6000
++  UBOOT_CONFIG:=mt7986a_glinet_gl-mt6000
++  UBOOT_IMAGE:=u-boot.fip
++  BL2_BOOTDEV:=emmc
++  BL2_SOC:=mt7986
++  BL2_DDRTYPE:=ddr4
++  DEPENDS:=+trusted-firmware-a-mt7986-emmc-ddr4
++endef
++
+ UBOOT_TARGETS := \
+ 	mt7620_mt7530_rfb \
+ 	mt7620_rfb \
+@@ -256,6 +268,7 @@
+ 	mt7986_bananapi_bpi-r3-sdmmc \
+ 	mt7986_bananapi_bpi-r3-snand \
+ 	mt7986_bananapi_bpi-r3-nor \
++	mt7986_glinet_gl-mt6000 \
+ 	mt7986_rfb
+
+ ifdef CONFIG_TARGET_mediatek
+@@ -307,4 +320,4 @@
+ 	$(INSTALL_DATA) $(PKG_BUILD_DIR)/$(UBOOT_IMAGE) $(STAGING_DIR_IMAGE)/$(BUILD_VARIANT)-$(UBOOT_IMAGE)
+ endef
+
+-$(eval $(call BuildPackage/U-Boot))
++$(eval $(call BuildPackage/U-Boot))
