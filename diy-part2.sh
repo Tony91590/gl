@@ -26,14 +26,14 @@ cp $GITHUB_WORKSPACE/lean/Redmi-AX6000/data/default-settings/Makefile package/le
 cp $GITHUB_WORKSPACE/lean/Redmi-AX6000/data/autocore/index.htm package/lean/autocore/files/arm/
 cp $GITHUB_WORKSPACE/lean/Redmi-AX6000/data/zones.lua feeds/luci/applications/luci-app-firewall/luasrc/model/cbi/firewall/
 # apply patch 1
-BOARD_PATH="package/boot/uboot-mediatek/Makefile"
+BOARD_PATH="package/boot/uboot-mediatek"
 cp $GITHUB_WORKSPACE/patches/0001-Add-GL-MT6000.patch $BOARD_PATH/
 cd $BOARD_PATH/
 OP_RESULT=$(patch < 0001-Add-GL-MT6000.patch)
 rm -rf 0001-Add-GL-MT6000.patch.patch
 echo "0001-Add-GL-MT6000.patch config file: $OP_RESULT"
 # apply patch 2
-BOARD_PATH="target/linux/mediatek/image/filogic.mk"
+BOARD_PATH="target/linux/mediatek/image"
 cp $GITHUB_WORKSPACE/patches/0002-Add-GL-MT6000.patch $BOARD_PATH/
 cd $BOARD_PATH/
 OP_RESULT=$(patch < 0002-Add-GL-MT6000.patch)
