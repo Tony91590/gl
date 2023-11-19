@@ -25,6 +25,7 @@ cp $GITHUB_WORKSPACE/lean/Redmi-AX6000/data/default-settings/zzz-default-setting
 cp $GITHUB_WORKSPACE/lean/Redmi-AX6000/data/default-settings/Makefile package/lean/default-settings/
 cp $GITHUB_WORKSPACE/lean/Redmi-AX6000/data/autocore/index.htm package/lean/autocore/files/arm/
 cp $GITHUB_WORKSPACE/lean/Redmi-AX6000/data/zones.lua feeds/luci/applications/luci-app-firewall/luasrc/model/cbi/firewall/
+cp $GITHUB_WORKSPACE/patches/patches/Add-GL-MT6000.patch patches/
 # apply patch 
 find patches -type f -exec bash -c "(cd "$GITHUB_WORKSPACE/patches" && patch -p1) < {}" \;
 find patches -type f -name \*.orig -delete
