@@ -137,9 +137,9 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "release_tag=$(date +"%Y.%m.%d-%H%M")-Redmi-AX6000-lean">> $GITHUB_OUTPUT
+        echo "release_tag=$(date +"%Y.%m.%d-%H%M")-GL.iNET-AX6000-lean">> $GITHUB_OUTPUT
         touch release.txt
-        echo "The default IP address is 192.168.31.1" >> release.txt
+        echo "The default IP address is 192.168.8.1" >> release.txt
         echo "📥 Firmware download" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
         
