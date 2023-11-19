@@ -53,9 +53,3 @@
 
  define Device/h3c_magic-nx30-pro
    DEVICE_VENDOR := H3C
-@@ -351,4 +385,4 @@
-   KERNEL_IN_UBI := 1
-   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
- endef
--TARGET_DEVICES += xiaomi_redmi-router-ax6000
-+TARGET_DEVICES += xiaomi_redmi-router-ax6000
