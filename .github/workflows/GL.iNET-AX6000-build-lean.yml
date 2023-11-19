@@ -9,7 +9,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 ###############Name##############
-name: Redmi-AX6000-build-lean
+name: GL.iNET-AX6000-build-lean
 
 on:
   repository_dispatch:
