@@ -14,7 +14,7 @@
 +	(5470 - 5725 @ 160), (1000 mW), DFS, wmmrule=ETSI
  	# short range devices (ETSI EN 300 440-1)
 -	(5725 - 5875 @ 80), (25 mW)
-+	(5725 - 5875 @ 80), (1000 mW)
++	(5725 - 5875 @ 80), (25 mW)
  	# WiFi 6E low power indoor
 -	(5945 - 6425 @ 160), (23), NO-OUTDOOR, wmmrule=ETSI
 +	(5945 - 6425 @ 160), (30), NO-OUTDOOR, wmmrule=ETSI
