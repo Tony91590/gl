@@ -19,7 +19,7 @@ sed -i 's/cn.pool.ntp.org/3.openwrt.pool.ntp.org/g' package/base-files/files/bin
 sed -i 's/zh_cn/auto/g' feeds/luci/modules/luci-base/root/etc/uci-defaults/luci-base 
 sed -i '/AUTOLOAD:=$(call AutoProbe,mt7915e)/a \  MODPARAMS.mt7915e:=wed_enable=Y' package/kernel/mt76/Makefile
 cp $GITHUB_WORKSPACE/lean/GL-MT6000/data/ddns.config feeds/packages/net/ddns-scripts/files/
-cp $GITHUB_WORKSPACE/lean/GL-MT6000/data/wireless-reg.patch package/firmware/wireless-regdb/patches/
+#cp $GITHUB_WORKSPACE/lean/GL-MT6000/data/wireless-reg.patch package/firmware/wireless-regdb/patches/
 cp $GITHUB_WORKSPACE/lean/GL-MT6000/data/default-settings/zzz-default-settings package/lean/default-settings/files/
 cp $GITHUB_WORKSPACE/lean/GL-MT6000/data/default-settings/Makefile package/lean/default-settings/
 cp $GITHUB_WORKSPACE/lean/GL-MT6000/data/autocore/index.htm package/lean/autocore/files/arm/
