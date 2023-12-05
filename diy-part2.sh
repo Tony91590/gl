@@ -50,3 +50,6 @@ EOF
 #rm -rf 0002-Add-GL-MT6000.patch.patch
 #echo "0002-Add-GL-MT6000.patch config file: $OP_RESULT"
 #cd ~-
+sed -i 's/openwrt/Tony91590/g' package/kernel/mt76/Makefile
+sed -i 's/b14c2351ddb8601c322576d84029e463d456caef/5eab96ccb27d07e49fef96f3791763d2ee265264/g' package/kernel/mt76/Makefile
+sed -i '/PKG_MIRROR_HASH/d' package/kernel/mt76/Makefile
