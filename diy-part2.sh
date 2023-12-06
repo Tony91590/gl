@@ -17,6 +17,7 @@ sed -i 's/time1.cloud.tencent.com/1.openwrt.pool.ntp.org/g' package/base-files/f
 sed -i 's/time.ustc.edu.cn/2.openwrt.pool.ntp.org/g' package/base-files/files/bin/config_generate
 sed -i 's/cn.pool.ntp.org/3.openwrt.pool.ntp.org/g' package/base-files/files/bin/config_generate
 sed -i 's/zh_cn/auto/g' feeds/luci/modules/luci-base/root/etc/uci-defaults/luci-base 
+sed -i 's/switch@31/switch@1f/g' target/linux/mediatek/dts/mt7986a-glinet-gl-mt6000.dts
 sed -i '/AUTOLOAD:=$(call AutoProbe,mt7915e)/a \  MODPARAMS.mt7915e:=wed_enable=Y' package/kernel/mt76/Makefile
 cp $GITHUB_WORKSPACE/lean/GL-MT6000/data/ddns.config feeds/packages/net/ddns-scripts/files/
 #cp $GITHUB_WORKSPACE/lean/GL-MT6000/data/wireless-reg.patch package/firmware/wireless-regdb/patches/
