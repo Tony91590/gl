@@ -23,7 +23,7 @@ cp $GITHUB_WORKSPACE/lean/GL-MT6000/data/ddns.config feeds/packages/net/ddns-scr
 #cp $GITHUB_WORKSPACE/lean/GL-MT6000/data/wireless-reg.patch package/firmware/wireless-regdb/patches/
 cp $GITHUB_WORKSPACE/lean/GL-MT6000/data/default-settings/zzz-default-settings package/lean/default-settings/files/
 cp $GITHUB_WORKSPACE/lean/GL-MT6000/data/default-settings/Makefile package/lean/default-settings/
-#cp $GITHUB_WORKSPACE/lean/GL-MT6000/data/autocore/index.htm package/lean/autocore/files/arm/
+cp $GITHUB_WORKSPACE/lean/GL-MT6000/data/autocore/index.htm package/lean/autocore/files/arm/
 cp $GITHUB_WORKSPACE/lean/GL-MT6000/data/zones.lua feeds/luci/applications/luci-app-firewall/luasrc/model/cbi/firewall/
 cat > package/base-files/files/etc/banner << EOF
   _______                     ________        __
