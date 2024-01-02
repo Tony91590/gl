@@ -3,6 +3,8 @@
 uci set fstab.@global[0].anon_mount='1'
 uci commit fstab
 
+uci set wireless.wifi1.channels='36,40,44,48,52,56,60,64'
+
 uci set firewall.@defaults[0].flow_offloading='1'
 uci set firewall.@defaults[0].flow_offloading_hw='1'
 uci set firewall.@defaults[0].fullcone='2'
